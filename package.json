@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter mochawesome",
+    "coverage": "c8 --reporter=html --reporter=lcov npm test"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/ryasrdp/practice_unit/issues"
   },
-  "homepage": "https://github.com/ryasrdp/practice_unit#readme"
+  "homepage": "https://github.com/ryasrdp/practice_unit#readme",
+  "devDependencies": {
+    "c8": "^10.1.3",
+    "mochawesome": "^7.1.3"
+  }
 }
